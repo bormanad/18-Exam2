@@ -88,8 +88,9 @@ class Cloud(object):
         if self.water < 0:
             self.water = 0
             return self.capacity
-        else:
-            return rain_amount
+        return self.water
+
+
 
         """
         What comes in:
@@ -173,8 +174,6 @@ class Cloud(object):
 
 
     def merge_cloud(self, another_cloud):
-        self.water = self.water + another_cloud.water
-        self.capacity = self.capacity + another_cloud.capacity
         """
         What comes in:
           -- self
