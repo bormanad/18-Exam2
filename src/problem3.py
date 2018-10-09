@@ -49,6 +49,7 @@ class Cloud(object):
         self.water = water
         if water > capacity:
             self.water = self.capacity
+        self.totalRain = 0
         """
         What comes in:
           -- capacity, a number representing the maximum amount of water
@@ -87,7 +88,7 @@ class Cloud(object):
         self.water = self.water - rain_amount
         if self.water < 0:
             self.water = 0
-            return self.capacity
+        self.totalRain = self.totalRain + rain_amount
         return self.water
 
 
@@ -139,7 +140,7 @@ class Cloud(object):
 
 
     def get_total_rain_amount(self):
-
+        return self.totalRain
         """
         What comes in:
           -- self
@@ -174,6 +175,10 @@ class Cloud(object):
 
 
     def merge_cloud(self, another_cloud):
+        self.water = another_cloud.water + self.water
+        self.capacity = another_cloud.capacity + self.capacity
+        another_cloud.capacity = 0
+        another_cloud.water = 0
         """
         What comes in:
           -- self
