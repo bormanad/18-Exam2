@@ -109,7 +109,7 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem2a()
+    run_test_problem2a()
     # run_test_problem2b()
 
 
@@ -181,6 +181,9 @@ def run_test_problem2a():
 
 
 def problem2a(triangle):
+    newt = Triangle(triangle.a*2, triangle.b*2, triangle.c*2)
+    return newt
+
     """
     What comes in:  a Triangle
     What goes out:  Returns a new Triangle whose side lengths are all
@@ -196,7 +199,7 @@ def problem2a(triangle):
       :rtype: Triangle
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -334,6 +337,12 @@ def run_test_problem2b():
 # of the Triangle class (at the top of this file) for a useful method.
 # -----------------------------------------------------------------------------
 def problem2b(triangles):
+    total = 0
+
+    for k in range(len(triangles)):
+        total = total + triangles[k].get_area()
+
+    return total
     """
     What comes in:  a sequence of Triangle objects (which could be empty)
       (where the   Triangle   class is defined above).
@@ -354,7 +363,7 @@ def problem2b(triangles):
       :rtype: int | float
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # IMPORTANT: See the HINT just before the DEF of this function.
     # -------------------------------------------------------------------------

@@ -402,7 +402,7 @@ def problem1b(strings):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -599,7 +599,7 @@ def problem1c(strings):
       :rtype: bool
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # See  IMPORTANT  note before the DEF line of this function.
     # -------------------------------------------------------------------------
@@ -791,7 +791,7 @@ def problem1d(strings):
       :rtype: str | -1
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
